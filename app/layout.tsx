@@ -6,7 +6,7 @@ import { ThemeProvider } from "next-themes";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Default Portfolio",
+  title: "Portfolio Landing Page",
   description: "Modern & Minimalist NEXT.js portfolio",
 };
 
