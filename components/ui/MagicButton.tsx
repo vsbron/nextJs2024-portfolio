@@ -1,3 +1,4 @@
+// Component from Aceternity UI
 function MagicButton({
   title,
   icon,

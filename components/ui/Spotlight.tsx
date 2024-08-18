@@ -6,6 +6,7 @@ type SpotlightProps = {
   fill?: string;
 };
 
+// Component from Aceternity UI
 export const Spotlight = ({ className, fill }: SpotlightProps) => {
   return (
     <svg

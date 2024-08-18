@@ -1,9 +1,10 @@
-# Portolio Landing Page
+# Developer Portolio Landing Page
 
-Portfolio example SPA.
+Developer Portfolio example SPA.
 
 ## Features
 
+- Floating Navigation that appears when scrolling up;
 - Hero section with animated header;
 
 ## Details
