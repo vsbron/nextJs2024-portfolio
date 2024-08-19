@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 "use client";
 import { useState } from "react";
 import Lottie from "react-lottie";
@@ -10,6 +9,7 @@ import MagicButton from "./MagicButton";
 
 import { cn } from "@/lib/utils";
 import animationData from "@/data/confetti.json";
+import Image from "next/image";
 
 // Component from Aceternity UI
 export const BentoGrid = ({
@@ -86,11 +86,17 @@ export const BentoGridItem = ({
       <div className={`${id === 6 && "flex justify-center"} h-full`}>
         <div className="w-full h-full absolute">
           {img && (
-            <img
-              src={img}
-              className={`${imgClassName} object-cover object-center`}
-              alt={img}
-            />
+            <div
+              className={`${imgClassName} ${
+                id === 1
+                  ? "aspect-[689/541] h-[354px]"
+                  : id === 4
+                  ? "aspect-[351/180] h-[180px]"
+                  : id === 5 && "aspect-[500/383] h-[294px]"
+              }`}
+            >
+              <Image src={img} className={` object-cover`} fill alt={img} />
+            </div>
           )}
         </div>
         <div
@@ -99,11 +105,22 @@ export const BentoGridItem = ({
           }`}
         >
           {spareImg && (
-            <img
-              src={spareImg}
-              className="object-cover object-center w-full h-full"
-              alt={spareImg}
-            />
+            <div
+              className={`relative ${
+                id === 4
+                  ? "aspect-[104/48] h-[96px]"
+                  : id === 5
+                  ? "aspect-[117/60] w-[100%]"
+                  : ""
+              }`}
+            >
+              <Image
+                src={spareImg}
+                className="object-cover"
+                fill
+                alt={spareImg}
+              />
+            </div>
           )}
         </div>
 
@@ -151,7 +168,7 @@ export const BentoGridItem = ({
           )}
           {id === 6 && (
             <div className="mt-5 relative">
-              <div className={`absolute -bottom-5 right-0`}>
+              <div className={`absolute -bottom-5 right-0 pointer-events-none`}>
                 <Lottie options={lottieDefaultOptions} />
               </div>
               <MagicButton
