@@ -1,12 +1,15 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
-import { cn } from "@/lib/utils";
-import { BackgroundGradientAnimation } from "./GradientBg";
-import { GlobeDemo } from "./GridGlobe";
-import Lottie from "react-lottie";
 import { useState } from "react";
-import animationData from "@/data/confetti.json";
-import MagicButton from "./MagicButton";
+import Lottie from "react-lottie";
 import { IoCopyOutline } from "react-icons/io5";
+
+import { BackgroundGradientAnimation } from "./GradientBg";
+import { GlobeGrid } from "./GridGlobe";
+import MagicButton from "./MagicButton";
+
+import { cn } from "@/lib/utils";
+import animationData from "@/data/confetti.json";
 
 // Component from Aceternity UI
 export const BentoGrid = ({
@@ -52,21 +55,35 @@ export const BentoGridItem = ({
   // State for copied email
   const [copied, setCopied] = useState(false);
 
+  // Stack lists
+  const leftStack = ["React.js", "Next.js", "TypeScript"];
+  const rightStack = ["Tailwind", "GSAP", "Supabase"];
+
+  // Default options for Lottie component
+  const lottieDefaultOptions = {
+    loop: copied,
+    autoplay: copied,
+    animationData,
+    rendererSettings: { preserveAspectRatio: "xMidYMid slice" },
+  };
+
+  // Click handler for copying email
   const handleCopy = () => {
     navigator.clipboard.writeText("dummy@email.com");
     setCopied(true);
   };
 
+  // Returned JSX
   return (
     <div
-      className={`row-span-1 relative overflow-hidden rounded-3xl group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none justify-between flex flex-col space-y-4" border border-white/[0.1] ${className}`}
+      className={`row-span-1 relative overflow-hidden rounded-3xl group/bento hover:shadow-xl transition duration-200 justify-between flex flex-col space-y-4 border border-white/[0.1] ${className}`}
       style={{
-        background: "rgb(2,0,36)",
+        background: "rgb(4,7,29)",
         backgroundImage:
           "linear-gradient(90deg, rgb(4,7,29) 0%, rgb(12,14,35) 100%)",
       }}
     >
-      <div className={`${id === 6 && "flex justify-center h-full"}`}>
+      <div className={`${id === 6 && "flex justify-center"} h-full`}>
         <div className="w-full h-full absolute">
           {img && (
             <img
@@ -105,14 +122,14 @@ export const BentoGridItem = ({
             {title}
           </div>
 
-          {id === 2 && <GlobeDemo />}
+          {id === 2 && <GlobeGrid />}
           {id === 3 && (
             <div className="flex gap-1 lg:gap-5 w-fit absolute -right-3 lg:-right-2">
               <div className="flex flex-col gap-3 lg:gap-8">
-                {["React.js", "Next.js", "Typescript"].map((item) => (
+                {leftStack.map((item) => (
                   <span
                     key={item}
-                    className="py-2 px-3 lg:by-4 lg:px-3 text-xs lg:text-base opacity-50 lg:opacity-100 rounded-lg text-center  bg-[#10132E]"
+                    className="py-2 px-3 lg:py-4 lg:px-3 text-xs lg:text-base opacity-50 lg:opacity-100 rounded-lg text-center  bg-[#10132E]"
                   >
                     {item}
                   </span>
@@ -121,10 +138,10 @@ export const BentoGridItem = ({
               </div>
               <div className="flex flex-col gap-3 lg:gap-8">
                 <span className="py-4 px-3 rounded-lg text-center bg-[#10132E]" />
-                {["Tailwind", "View.js", "MongoDB"].map((item) => (
+                {rightStack.map((item) => (
                   <span
                     key={item}
-                    className="py-2 px-3 lg:by-4 lg:px-3 text-xs lg:text-base opacity-50 lg:opacity-100 rounded-lg text-center  bg-[#10132E]"
+                    className="py-2 px-3 lg:py-4 lg:px-3 text-xs lg:text-base opacity-50 lg:opacity-100 rounded-lg text-center  bg-[#10132E]"
                   >
                     {item}
                   </span>
@@ -135,14 +152,7 @@ export const BentoGridItem = ({
           {id === 6 && (
             <div className="mt-5 relative">
               <div className={`absolute -bottom-5 right-0`}>
-                <Lottie
-                  options={{
-                    loop: copied,
-                    autoplay: copied,
-                    animationData,
-                    rendererSettings: { preserveAspectRatio: "xMidYMid slice" },
-                  }}
-                />
+                <Lottie options={lottieDefaultOptions} />
               </div>
               <MagicButton
                 title={copied ? "Email copied" : "Copy my email"}
