@@ -7,6 +7,7 @@ Developer Portfolio example SPA with the use of some advanced webdev technologie
 - Floating Navigation that appears when scrolling up;
 - Hero section with animated header;
 - About section featuring Bento Grid with some info about the developer;
+- Recent projects section with the list of completed apps;
 
 ## Details
 
