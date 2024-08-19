@@ -86,15 +86,7 @@ export const BentoGridItem = ({
       <div className={`${id === 6 && "flex justify-center"} h-full`}>
         <div className="w-full h-full absolute">
           {img && (
-            <div
-              className={`${imgClassName} ${
-                id === 1
-                  ? "aspect-[689/541] h-[354px]"
-                  : id === 4
-                  ? "aspect-[351/180] h-[180px]"
-                  : id === 5 && "aspect-[500/383] h-[294px]"
-              }`}
-            >
+            <div className={imgClassName}>
               <Image src={img} className={` object-cover`} fill alt={img} />
             </div>
           )}
@@ -124,11 +116,7 @@ export const BentoGridItem = ({
           )}
         </div>
 
-        {id === 6 && (
-          <BackgroundGradientAnimation>
-            <div className="absolute z-50 flex items-center justify-center text-white font-bold"></div>
-          </BackgroundGradientAnimation>
-        )}
+        {id === 6 && <BackgroundGradientAnimation />}
         <div
           className={`${titleClassName} group-hover/bento:translate-x-2 transition duration-200 relative md:h-full min-h-40 flex flex-col px-5 p-5 lg:p-10`}
         >
