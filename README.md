@@ -9,6 +9,7 @@ Developer Portfolio example SPA with the use of some advanced webdev technologie
 - About section featuring Bento Grid with some info about the developer;
 - Recent projects section with the list of completed apps;
 - Testimonials section with reviews from the clients;
+- Work experience section listin some previousjob positions;
 
 ## Details
 
