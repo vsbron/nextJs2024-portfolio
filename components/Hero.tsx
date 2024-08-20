@@ -7,7 +7,7 @@ import { TextGenerateEffect } from "./ui/TextGenerateEffect";
 function Hero() {
   // Returned JSX
   return (
-    <div className="pb-20 pt-36">
+    <div className="flex flex-col items-center justify-center min-h-screen sm:min-h-0 sm:block sm:pb-16 sm:pt-24 xl:pb-20 xl:pt-36">
       {/* Spotlights */}
       <div>
         <Spotlight
@@ -34,7 +34,7 @@ function Hero() {
             Dynamic Web Magic with NEXT.js
           </h2>
           <TextGenerateEffect
-            className="text-center text-[40px] md:text-5xl lg:text-6xl"
+            className="text-center text-[40px] sm:text-5xl xl:text-6xl"
             words="Transforming Concepts into Seamless User Experiences"
           />
           <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
