@@ -1,11 +1,12 @@
-import { BentoGrid, BentoGridItem } from "./ui/BentoGrid";
-
 import { gridItems } from "@/data";
+
+import { BentoGrid, BentoGridItem } from "./ui/BentoGrid";
+import Section from "./ui/Section";
 
 function Grid() {
   // Returned JSX
   return (
-    <section id="about">
+    <Section id="about">
       <BentoGrid>
         {gridItems.map(
           ({
@@ -32,7 +33,7 @@ function Grid() {
           )
         )}
       </BentoGrid>
-    </section>
+    </Section>
   );
 }
 

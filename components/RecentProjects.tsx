@@ -1,30 +1,31 @@
 import Image from "next/image";
 import { FaLocationArrow } from "react-icons/fa";
 
-import { PinContainer } from "./ui/PinContainer";
-
 import { projects } from "@/data";
+
+import { PinContainer } from "./ui/PinContainer";
+import Section from "./ui/Section";
 
 function RecentProjects() {
   // Returned JSX
   return (
-    <div className="py-20" id="projects">
+    <Section id="projects">
       <h1 className="heading">
         A small selection of{" "}
         <span className="text-purple">Recent Projects</span>
       </h1>
-      <div className="flex flex-wrap items-center justify-center p-4 gap-x-20 gap-y-2 mt-10">
+      <div className="flex flex-wrap items-center justify-center gap-x-20 gap-y-2 max-md:-translate-y-7 max-md:-mb-7">
         {projects.map(({ id, title, description, img, iconLists, link }) => (
           <div
             key={id}
-            className="sm:h-[41rem] h-[32rem] lg:min-h-[32.5rem] flex items-center justify-center sm:w-[570px] w-[90vw]"
+            className="flex items-center justify-center w-[90vw] sm:w-[570px] h-[30rem] sm:h-[36rem] lg:h-[38rem]"
           >
             <PinContainer href={link}>
               <div className="relative flex items-center justify-center sm:w-[570px] w-[80vw] overflow-hidden sm:h-[40vh] h-[30vh] mb-10">
                 <div className="relative w-full h-full overflow-hidden lg:rounded-3xl bg-[#13162d]">
                   <Image fill src="/bg.png" alt="bg-img" />
                 </div>
-                <div className="absolute aspect-[450/302] h-[335px] z-10 bottom-0">
+                <div className="absolute aspect-[450/302] h-[290px] md:h-[335px] z-10 -bottom-7 md:bottom-0">
                   <Image src={img} fill alt={title} />
                 </div>
               </div>
@@ -58,7 +59,7 @@ function RecentProjects() {
           </div>
         ))}
       </div>
-    </div>
+    </Section>
   );
 }
 
