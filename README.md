@@ -8,6 +8,7 @@ Developer Portfolio example SPA with the use of some advanced webdev technologie
 - Hero section with animated header;
 - About section featuring Bento Grid with some info about the developer;
 - Recent projects section with the list of completed apps;
+- Testimonials section with reviews from the clients;
 
 ## Details
 
@@ -15,6 +16,7 @@ Developer Portfolio example SPA with the use of some advanced webdev technologie
 - Styles are handled via Tailwind CSS;
 - Interactive planet model is handled via Three.js;
 - Some UI elements are originally taken from Aceternity UI;
+- A big number of improvements were added to the layout and animation to the original project;
 
 ## Live version
 

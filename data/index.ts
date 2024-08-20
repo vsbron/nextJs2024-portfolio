@@ -112,33 +112,39 @@ export const projects = [
 export const testimonials = [
   {
     quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
+      "John's web development services exceeded all my expectations. Their attention to detail and quick turnaround time made the entire process smooth and stress-free. I highly recommend John to anyone looking for top-notch web development solutions.",
+    name: "Emily Thompson",
+    title: "Flower Shop Owner",
+    profilePic: "/profile1.png",
   },
   {
     quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
+      "I am extremely impressed with the top-notch web development services provided by John. Their team's expertise in creating stunning websites is unparalleled. I highly recommend John for anyone looking to elevate their online presence. If I'll need to create another website, I'll definetely contact John again!",
+
+    name: "Robert Granger",
+    title: "NordStack Technologies CEO",
+    profilePic: "/profile2.png",
   },
   {
     quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
+      "I recently had the pleasure of working with John on my web development project and I must say, he was incredibly helpful throughout the entire process. Not only was he able to bring my vision to life, but he also provided valuable suggestions and insights that enhanced the overall design and functionality of my website.",
+    name: "Sophie Parker",
+    title: "Entrepreneur",
+    profilePic: "/profile3.png",
   },
   {
     quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
+      "I had the pleasure of working with John, a talented web developer, and I couldn't be more impressed with his work. John's expertise in creating an impactful online presence is unparalleled. He truly understands the importance of a strong online presence and knows how to make it happen.",
+    name: "Will Michaels",
+    title: "Personal trainer",
+    profilePic: "/profile4.png",
   },
   {
     quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
+      "John has been instrumental in transforming our online presence with their exceptional web development services. Their attention to detail and commitment to quality has truly set them apart. The team at John is not only professional but also highly skilled in delivering top-notch websites. We are thrilled with the results!",
+    name: "Hubert Mitchell",
+    title: "Garage owner",
+    profilePic: "/profile5.png",
   },
 ];
 

@@ -1,9 +1,10 @@
 "use client";
+import React, { useEffect, useState } from "react";
+import Image from "next/image";
 
 import { cn } from "@/lib/utils";
-import Image from "next/image";
-import React, { useEffect, useState } from "react";
 
+// Component from Aceternity UI
 export const InfiniteMovingCards = ({
   items,
   direction = "left",
@@ -15,6 +16,7 @@ export const InfiniteMovingCards = ({
     quote: string;
     name: string;
     title: string;
+    profilePic: string;
   }[];
   direction?: "left" | "right";
   speed?: "fast" | "normal" | "slow";
@@ -88,7 +90,7 @@ export const InfiniteMovingCards = ({
       >
         {items.map((item, idx) => (
           <li
-            className="w-[90vw] max-w-full relative rounded-2xl border border-b-0 flex-shrink-0 border-slate-800 p-5 md:p-16 md:w-[60vw]"
+            className="w-[90vw] md:w-[40vw] max-w-full relative rounded-2xl border border-b-0 flex-shrink-0 border-slate-800 px-6 py-4 md:px-8 md:py-[2.5rem]"
             style={{
               background: "rgb(4,7,29)",
               backgroundImage:
@@ -105,20 +107,21 @@ export const InfiniteMovingCards = ({
                 {item.quote}
               </span>
               <div className="relative z-20 mt-6 flex flex-row items-center">
-                <span className="flex flex-col gap-1">
-                  <div className="me-3">
+                <span className="flex items-center gap-5">
+                  <div className="mt-1">
                     <Image
-                      src="/profile.svg"
+                      src={item.profilePic}
                       width={50}
                       height={50}
                       alt="profile"
+                      className="rounded-full"
                     />
                   </div>
                   <div className="flex flex-col gap-1">
-                    <span className="text-xl leading-[1.6] text-white font-bold">
+                    <span className="text-xl leading-[1.2] text-white font-bold">
                       {item.name}
                     </span>
-                    <span className="text-sm leading-[1.6] text-white-200 font-normal">
+                    <span className="text-sm leading-[1.2] text-white-200 font-normal">
                       {item.title}
                     </span>
                   </div>

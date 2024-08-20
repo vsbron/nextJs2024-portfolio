@@ -15,7 +15,7 @@ function Clients() {
       <div className="flex flex-col items-center">
         <InfiniteMovingCards
           items={testimonials}
-          direction="right"
+          direction="left"
           speed="slow"
         />
         <div className="flex flex-wrap items-center justify-center gap-4 md:gap-16 mt-10">
