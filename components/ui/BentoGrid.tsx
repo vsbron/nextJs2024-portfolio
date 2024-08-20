@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import { useState } from "react";
 import Lottie from "react-lottie";
 import { IoCopyOutline } from "react-icons/io5";
@@ -9,7 +10,6 @@ import MagicButton from "./MagicButton";
 
 import { cn } from "@/lib/utils";
 import animationData from "@/data/confetti.json";
-import Image from "next/image";
 
 // Component from Aceternity UI
 export const BentoGrid = ({

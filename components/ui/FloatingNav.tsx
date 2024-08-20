@@ -1,5 +1,7 @@
 "use client";
+import Link from "next/link";
 import React, { useState } from "react";
+
 import {
   motion,
   AnimatePresence,
@@ -7,7 +9,6 @@ import {
   useMotionValueEvent,
 } from "framer-motion";
 import { cn } from "@/lib/utils";
-import Link from "next/link";
 
 // Component from Aceternity UI
 export const FloatingNav = ({

@@ -1,7 +1,9 @@
-import { projects } from "@/data";
-import { PinContainer } from "./ui/PinContainer";
-import { FaLocationArrow } from "react-icons/fa";
 import Image from "next/image";
+import { FaLocationArrow } from "react-icons/fa";
+
+import { PinContainer } from "./ui/PinContainer";
+
+import { projects } from "@/data";
 
 function RecentProjects() {
   // Returned JSX
@@ -17,12 +19,12 @@ function RecentProjects() {
             key={id}
             className="sm:h-[41rem] h-[32rem] lg:min-h-[32.5rem] flex items-center justify-center sm:w-[570px] w-[90vw]"
           >
-            <PinContainer title="Visit" href={link}>
+            <PinContainer href={link}>
               <div className="relative flex items-center justify-center sm:w-[570px] w-[80vw] overflow-hidden sm:h-[40vh] h-[30vh] mb-10">
                 <div className="relative w-full h-full overflow-hidden lg:rounded-3xl bg-[#13162d]">
                   <Image fill src="/bg.png" alt="bg-img" />
                 </div>
-                <div className="absolute aspect-[450/302] h-[301px] z-10 bottom-0">
+                <div className="absolute aspect-[450/302] h-[335px] z-10 bottom-0">
                   <Image src={img} fill alt={title} />
                 </div>
               </div>
