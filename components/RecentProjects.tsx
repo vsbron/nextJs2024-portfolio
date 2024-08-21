@@ -10,11 +10,11 @@ function RecentProjects() {
   // Returned JSX
   return (
     <Section id="projects">
-      <h1 className="heading">
+      <h2 className="heading">
         A small selection of{" "}
         <span className="text-purple">Recent Projects</span>
-      </h1>
-      <div className="flex flex-wrap items-center justify-center gap-x-20 gap-y-2 max-md:-translate-y-7 max-md:-mb-7">
+      </h2>
+      <div className="flex flex-wrap items-center justify-center gap-x-20 gap-y-8 max-md:-translate-y-7 max-md:-mb-7">
         {projects.map(({ id, title, description, img, iconLists, link }) => (
           <div
             key={id}
@@ -29,9 +29,9 @@ function RecentProjects() {
                   <Image src={img} fill alt={title} />
                 </div>
               </div>
-              <h2 className="font-bold lg:text-2xl md:text-xl text-base line-clamp-1">
+              <h3 className="font-bold lg:text-2xl md:text-xl text-base line-clamp-1">
                 {title}
-              </h2>
+              </h3>
               <p className="lg:text-xl lg:font-normal fonr-light text-sm line-clamp-2">
                 {description}
               </p>

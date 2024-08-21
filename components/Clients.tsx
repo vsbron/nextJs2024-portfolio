@@ -9,9 +9,9 @@ function Clients() {
   // Returned JSX
   return (
     <Section id="testimonials">
-      <h1 className="heading">
+      <h2 className="heading">
         Kind words from <span className="text-purple">Satisfied clients</span>
-      </h1>
+      </h2>
       <div className="flex flex-col items-center">
         <InfiniteMovingCards
           items={testimonials}

@@ -7,9 +7,9 @@ import Image from "next/image";
 function Experience() {
   return (
     <Section>
-      <h1 className="heading">
+      <h2 className="heading">
         My <span className="text-purple">work experience</span>
-      </h1>
+      </h2>
       <div className="w-full grid grid-cols-1 lg:grid-cols-4 gap-10">
         {workExperience.map((card) => (
           <Button
@@ -23,9 +23,9 @@ function Experience() {
                 <Image src={card.thumbnail} alt={card.thumbnail} fill />
               </div>
               <div className="lg:ms-5">
-                <h2 className="text-start text-xl md:text-2xl font-bold">
+                <h3 className="text-start text-xl md:text-2xl font-bold">
                   {card.title}
-                </h2>
+                </h3>
                 <p className="text-start text-white-100 mt-3 font-semibold">
                   {card.description}
                 </p>
