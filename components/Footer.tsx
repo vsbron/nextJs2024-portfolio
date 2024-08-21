@@ -9,7 +9,7 @@ function Footer() {
   // Returned JSX
   return (
     <footer className="w-full pt-20 pb-10 md:mb-5" id="contact">
-      <div className="w-full absolute left-0 -bottom-72 min-h-96">
+      <div className="w-full absolute left-0 -bottom-72 min-h-96 pointer-events-none">
         <div className="relative h-[1200px]">
           <Image
             src="/footer-grid.svg"
@@ -36,25 +36,39 @@ function Footer() {
           />
         </a>
       </div>
-      <div className="flex mt-16 md:flex-row flex-col-reverse justify-between items-center gap-6">
-        <p className=" text-xs md:text-sm font-light text-center md:text-left">
-          Copyright &copy;2024 John.
+      <div className="flex mt-16 md:flex-row flex-col justify-between items-center gap-6">
+        <div className="flex flex-col gap-4">
+          <div className="flex items-center justify-center md:justify-start md:gap-3 gap-6">
+            {socialMedia.map((profile) => (
+              <a href={profile.url} target="_blank" key={profile.id}>
+                <span className="w-10 h-10 flex justify-center items-center backdrop-filter backdrop-blur-lg backdrop-saturate-180 bg-opacity-75 bg-black-200 rounded-lg border border-black-300 hover:bg-black-300 transition-all duration-300">
+                  <Image
+                    src={profile.img}
+                    alt={profile.name}
+                    width={20}
+                    height={20}
+                  />
+                </span>
+              </a>
+            ))}
+          </div>
+          <p className="text-xs md:text-sm font-light text-center md:text-left">
+            Copyright &copy;2024 John. All rights reserved.
+          </p>
+        </div>
+        <div className="text-center md:text-right text-xs md:text-sm">
+          Built by VSBroN as a practice project
           <br />
-          All rights reserved.
-        </p>
-        <div className="flex items-center md:gap-3 gap-6">
-          {socialMedia.map((profile) => (
-            <a href={profile.url} target="_blank" key={profile.id}>
-              <span className="w-10 h-10 flex justify-center items-center backdrop-filter backdrop-blur-lg backdrop-saturate-180 bg-opacity-75 bg-black-200 rounded-lg border border-black-300 hover:bg-black-300 transition-all duration-300">
-                <Image
-                  src={profile.img}
-                  alt={profile.name}
-                  width={20}
-                  height={20}
-                />
-              </span>
-            </a>
-          ))}
+          This project is available on{" "}
+          <a
+            href="https://github.com/vsbron/nextJs2024-portfolio-lp"
+            target="_blank"
+            className="underline"
+          >
+            GitHub
+          </a>
+          <br />
+          ©2024. All rights reserved
         </div>
       </div>
     </footer>
