@@ -8,7 +8,7 @@ import MagicButton from "./ui/MagicButton";
 function Footer() {
   // Returned JSX
   return (
-    <footer className="w-full pt-20 pb-10" id="contact">
+    <footer className="w-full pt-20 pb-10 md:mb-5" id="contact">
       <div className="w-full absolute left-0 -bottom-72 min-h-96">
         <div className="relative h-[1200px]">
           <Image

@@ -20,6 +20,7 @@ Developer Portfolio example SPA with the use of some advanced webdev technologie
 - Interactive planet model is handled via Three.js;
 - Some UI elements are originally taken from Aceternity UI;
 - A big number of improvements were added to the layout and animation to the original project;
+- Responsive design supporting mobile devices with a width of at least 360px;
 
 ## Live version
 
