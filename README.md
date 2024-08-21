@@ -11,6 +11,7 @@ Developer Portfolio example SPA with the use of some advanced webdev technologie
 - Testimonials section with reviews from the clients;
 - Work experience section listing some previous job positions;
 - Approach section showcases the whole working process steps;
+- Closing Footer section with contact details;
 
 ## Details
 
